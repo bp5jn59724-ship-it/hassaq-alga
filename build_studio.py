@@ -32,6 +32,6 @@ html='''<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="v
 </body></html>'''
 # A malformed option must not silently change the available choices.
 html=html.replace('<option>NORI — доставка суши</option>', '<option>NORI — доставка суши</option>').replace('</option>NORI — доставка суши</option>', '</option><option>NORI — доставка суши</option>')
-(R/'index.html').write_text(html)
+(R/'index.html').write_text(html.replace('<br>', '<br> '))
 (R/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#20221f"/><text x="8" y="44" fill="#f6f5f1" font-family="Arial" font-size="40" font-weight="bold" letter-spacing="-4">ae</text></svg>')
 print('Built studio portfolio HTML')
