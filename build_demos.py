@@ -138,3 +138,7 @@ mobile_fixes={
 for slug,css in mobile_fixes.items():
  p=ROOT/slug/'style.css'
  p.write_text(p.read_text()+'\n'+css+'\n')
+
+# Apply the distinct medium and maximum presentation layers.
+import runpy
+runpy.run_path(str(Path(__file__).parent / "upgrade_demos.py"))
