@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: hassaq-alga
-    runtime: static
-    buildCommand: node --check dist/app.js && node scripts/verify.mjs
-    staticPublishPath: ./dist
-    autoDeployTrigger: commit
